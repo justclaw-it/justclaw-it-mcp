@@ -1,0 +1,45 @@
+{
+  "name": "@justclaw-it/cli",
+  "version": "0.1.0",
+  "description": "Connect Claude Code, Cursor, Codex, Windsurf, Claude Desktop, OpenClaw and Hermes to the JustClaw-It MCP component registry in one command.",
+  "type": "module",
+  "bin": {
+    "justclaw-it": "bin/justclaw-it.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "prepack": "node scripts/bundle.mjs",
+    "postpack": "node scripts/bundle.mjs --clean"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "cursor",
+    "codex",
+    "openclaw",
+    "agent-skills",
+    "components"
+  ],
+  "homepage": "https://justclaw.it.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justclaw-it/justclaw-it-mcp.git",
+    "directory": "cli"
+  },
+  "bugs": "https://github.com/justclaw-it/justclaw-it-mcp/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "justclaw-it-key",
+      "description": "JustClaw-It API key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "justclaw-it": {
+      "type": "http",
+      "url": "https://justclaw.it.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:justclaw-it-key}"
+      }
+    }
+  }
+}

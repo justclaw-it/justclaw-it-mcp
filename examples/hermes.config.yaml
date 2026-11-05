@@ -1,0 +1,6 @@
+# ~/.hermes/config.yaml  (and JUSTCLAW_IT_API_KEY=<YOUR_API_KEY> in ~/.hermes/.env)
+mcp_servers:
+  justclaw-it:
+    url: "https://justclaw.it.com/mcp"
+    headers:
+      Authorization: "Bearer ${JUSTCLAW_IT_API_KEY}"

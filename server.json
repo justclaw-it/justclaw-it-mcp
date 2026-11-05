@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.it.justclaw/justclaw-it",
+  "title": "JustClaw-It",
+  "description": "Licence-cleared code for coding agents, with attribution. Free search, MCP prompts and a skill pack.",
+  "repository": {
+    "url": "https://github.com/justclaw-it/justclaw-it-mcp",
+    "source": "github"
+  },
+  "version": "1.13.0",
+  "websiteUrl": "https://justclaw.it.com",
+  "icons": [
+    {
+      "src": "https://justclaw.it.com/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "180x180"
+      ]
+    },
+    {
+      "src": "https://justclaw.it.com/static/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://justclaw.it.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your JustClaw-It API key>. Optional for search_components; every other tool needs a free key from https://justclaw.it.com/signup",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

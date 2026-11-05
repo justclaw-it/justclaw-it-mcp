@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "justclaw-it": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.15.2",
+        "https://justclaw.it.com/mcp",
+        "--header",
+        "Authorization:${JUSTCLAW_IT_AUTH}"
+      ],
+      "env": {
+        "JUSTCLAW_IT_AUTH": "Bearer <YOUR_API_KEY>"
+      }
+    }
+  }
+}

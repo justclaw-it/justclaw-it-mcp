@@ -1,0 +1,10 @@
+# ~/.codex/config.toml
+# Either let Codex read the key from an environment variable (export JUSTCLAW_IT_API_KEY=...):
+[mcp_servers.justclaw-it]
+url = "https://justclaw.it.com/mcp"
+bearer_token_env_var = "JUSTCLAW_IT_API_KEY"
+
+# ...or put it in the file instead (use one form, not both):
+# [mcp_servers.justclaw-it]
+# url = "https://justclaw.it.com/mcp"
+# http_headers = { "Authorization" = "Bearer <YOUR_API_KEY>" }

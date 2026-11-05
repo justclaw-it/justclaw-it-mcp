@@ -1,0 +1,7 @@
+node_modules/
+*.tgz
+cli/skills/
+cli/README.md
+cli/LICENSE
+.env
+*.justclaw-it-bak-*
