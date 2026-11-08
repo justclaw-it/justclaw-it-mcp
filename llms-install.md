@@ -8,7 +8,15 @@ JustClaw-It MCP is a hosted, remote MCP server (streamable HTTP) at `https://jus
 
 ## 2. Add the server to Cline
 
-Open Cline's MCP settings file (`cline_mcp_settings.json`; in the extension use MCP Servers > Configure MCP Servers) and add this entry under `mcpServers`:
+**Cline CLI** (one command; checked against Cline CLI 3.0.74, it writes `cline_mcp_settings.json` for you):
+
+```sh
+cline mcp add justclaw-it --transport streamable-http --yes https://justclaw.it.com/mcp
+```
+
+With a key, add `--header "Authorization: Bearer <YOUR_API_KEY>"`.
+
+**Cline in VS Code**: open MCP Servers > Configure MCP Servers and add this under `mcpServers`:
 
 ```json
 {
