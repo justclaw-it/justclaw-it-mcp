@@ -1,6 +1,6 @@
 # JustClaw-It MCP: real components for your coding agent
 
-JustClaw-It MCP is a remote MCP server. It lets Claude Code, Cursor, Codex, Windsurf, Claude Desktop, OpenClaw and Hermes search **over a million real, quality-scored components, every one licence-cleared with attribution** mined from production repos, instead of hallucinating them. Every result comes with a GitHub permalink and its licence.
+JustClaw-It MCP is a remote MCP server. It lets Claude Code, Cursor, Codex, Windsurf, Claude Desktop, OpenClaw and Hermes search **over 5.3 million real, quality-scored components, every one licence-cleared with attribution** mined from production repos, instead of hallucinating them. Every result comes with a GitHub permalink and its licence.
 
 This repo is the **connector**: a one-command installer, agent skills, and manual config snippets. The server itself is a hosted service at `https://justclaw.it.com/mcp`.
 
