@@ -39,9 +39,7 @@ codex mcp add justclaw-it --url https://justclaw.it.com/mcp --bearer-token-env-v
 
 Then restart the client and ask it: *"search JustClaw-It for a stripe webhook handler"*. Windsurf, Claude Desktop, OpenClaw, Hermes and any other MCP client: see [Manual setup](#manual-setup); every config is also in [`examples/`](examples/).
 
-## Installer CLI (once it is on npm)
-
-> `@justclaw-it/cli` is not published on npm yet; until it is, use the one-liners above.
+## Installer CLI
 
 ```sh
 npx @justclaw-it/cli init
