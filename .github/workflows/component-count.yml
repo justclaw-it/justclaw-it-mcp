@@ -1,0 +1,32 @@
+name: component-count
+on:
+  schedule:
+    - cron: "17 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/sync-component-count.mjs --write
+      - name: open a pull request when the rounded count moved
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git diff --quiet README.md && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="chore/component-count-${GITHUB_RUN_ID}"
+          git checkout -b "$branch"
+          git add README.md
+          git commit -m "docs: refresh the public component count"
+          git push origin "$branch"
+          gh pr create --repo "$GITHUB_REPOSITORY" --head "$branch" --title "docs: refresh the public component count" --body "The public page's rounded-down count moved. No other file changes."
